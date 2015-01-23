@@ -36,3 +36,6 @@ The result is saved as merged_clean_data.txt, a 10299x68 data frame such that th
 
 The result is saved as 'my_tidyData.txt', a 180x68 data frame.
 There are 30 subjects and 6 activities, thus 180 rows in this data set with averages.
+
+## end file
+
