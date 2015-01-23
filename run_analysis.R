@@ -100,7 +100,7 @@ names(Data)<-gsub("Mag", "Magnitude", names(Data))
 names(Data)<-gsub("BodyBody", "Body", names(Data))
 #Verify
  names(Data)
- write.table(Data, "merged_clean_data.txt") # write out the 1st dataset
+ write.table(Data, "merged_clean_data.txt") # write out dataset
 #---end Q4
  
 # Q5  FROM THE DATA SET IN STEP 4, CREATES A SECOND, INDEPENDENT TIDY DATA SET WITH THE AVERAGE OF EACH VARIABLE FOR EACH ACTIVITY AND EACH SUBJECT.
@@ -108,7 +108,7 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
 library(plyr);
 Data2<-aggregate(. ~subject + activity, Data, mean)
 Data2<-Data2[order(Data2$subject,Data2$activity),]
-write.table(Data2, file = "my_tidyData.txt",row.name=FALSE)    # write out 2nd datset
+write.table(Data2, file = "my_tidyData.txt",row.name=FALSE)    # write out datset
 
 ##---end Q5
 
