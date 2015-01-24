@@ -13,4 +13,4 @@ run_analysis.R contains code to respond the five questions in the assigment. It 
 
 CodeBook.md describes the variables, the data, and any transformations or work that was performed to clean up the data.
 
-The output of the 5th step is called "my_tidyData.txt", and uploaded in the course project's form and in Github.
+The output of the 5th step is called "my_tidyData.txt", and uploaded in the course project submission page and in Github.
