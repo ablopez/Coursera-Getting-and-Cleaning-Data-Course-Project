@@ -1,5 +1,5 @@
 # Coursera-Getting-and-Cleaning-Data-Course-Project
-This repository for the Coursera "Getting and Cleaning data" project.
+Repository for the Coursera "Getting and Cleaning data" project.
 
 The soucred data used for this project is the dataset "Human Activity Recognition Using Smartphones"
 
@@ -11,6 +11,6 @@ In order to run the script,the source file must be downloaded and unziped.
 
 run_analysis.R contains code to respond the five questions in the assigment. It can be launched in RStudio
 
-CodeBook.md describes the variables, the data, and any transformations or work that was performed to clean up the data.
+CodeBook.md describes the variables, data, work and results to clean up the data.
 
-The output of the 5th step is called "my_tidyData.txt", and uploaded in the course project submission page and witin this Github repository.
+The output of the 5th question is in the file "my_tidyData.txt", also uploaded in the course project submission page and witin this Github repository.
