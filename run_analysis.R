@@ -11,7 +11,7 @@ library(plyr);
 fileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "     
 download.file(fileUrl,destfile="C:/Users/me/Desktop/AS/Dataset.zip", mode="wb")
 unzip(zipfile="C:/Users/me/Desktop/AS/Dataset.zip",exdir="C:/Users/me/Desktop/AS")
-setwd("C:/Users/me/Desktop/AS/UCI HAR Dataset") #loadeded data is now in this folder
+setwd("C:/Users/me/Desktop/AS/UCI HAR Dataset") #unziped data is within this folder
 
 #Verify all required files are in working diectory
 path <- file.path("C:/Users/me/Desktop/AS/" , "UCI HAR Dataset")
