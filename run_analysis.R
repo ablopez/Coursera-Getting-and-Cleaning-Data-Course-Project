@@ -4,8 +4,10 @@
 getwd()
 setwd("C:/Users/me/Desktop/AS")
 dir()
+## Load required libaries
+library(plyr);
 
-##Reading,file and loding in R-studio and uzip it
+##Reading datafile and loding it in R-studio, then uzip it
 fileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "     
 download.file(fileUrl,destfile="C:/Users/me/Desktop/AS/Dataset.zip", mode="wb")
 unzip(zipfile="C:/Users/me/Desktop/AS/Dataset.zip",exdir="C:/Users/me/Desktop/AS")
@@ -42,6 +44,7 @@ datActivity<- rbind(dataActTrain, dataActTest)
 datSubject <- rbind(dataSubTrain, dataSubTest)
 datFeatures<- rbind(dataFeatTrain, dataFeatTest) 
 
+#Verifying results
 dim(datActivity)      #[1] 10299     1
 dim(datSubject)       #[1] 10299     1
 dim(datFeatures)      #[1] 10299   561
@@ -70,7 +73,7 @@ subdataFeaturesNames<-datFeatNames$V2[grep("mean\\(\\)|std\\(\\)", datFeatNames$
 MeanSTD<-c(as.character(subdataFeaturesNames), "subject", "activity")
 Data<-subset(Data,select=MeanSTD)
 
-# Verifying THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR EACH MEASUREMENT is included
+# Verifying THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR EACH MEASUREMENT are included
 str(Data)
 #---end Q2
 
@@ -80,7 +83,7 @@ activityLabel[, 2] = gsub("_", "", tolower(as.character(activityLabel[, 2])))
 datActivity[,1] = activityLabel[datActivity[,1], 2]
 names(datActivity) <- "activity"
 
-#Verifying
+#Verifying with a sample of 100
 head(datActivity$activity, 100)
 
 #---end Q3
@@ -105,7 +108,8 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
  
 # Q5  FROM THE DATA SET IN STEP 4, CREATES A SECOND, INDEPENDENT TIDY DATA SET WITH THE AVERAGE OF EACH VARIABLE FOR EACH ACTIVITY AND EACH SUBJECT.
 #In this part,a second, independent tidy data set will be created with the average of each variable for each activity and each subject based on the data set in step 4.
-library(plyr);
+require(plyr); #if not loaded previoulsy
+
 Data2<-aggregate(. ~subject + activity, Data, mean)
 Data2<-Data2[order(Data2$subject,Data2$activity),]
 write.table(Data2, file = "my_tidyData.txt",row.name=FALSE)    # write out datset
