@@ -7,9 +7,9 @@ Source description is under: http://archive.ics.uci.edu/ml/datasets/Human+Activi
 
 #Files
 
-In order to run the script,the source file must be downloaded and unziped.  
+In order to run the script,the source file must be downloaded and unziped in the appropriate working directory.  
 
-run_analysis.R contains code to respond the five questions in the assigment. It can be launched in RStudio
+run_analysis.R contains code to respond the five questions in the assigment. It can be launched in RStudio or equivalent.
 
 CodeBook.md describes the variables, data, work and results to clean up the data.
 
