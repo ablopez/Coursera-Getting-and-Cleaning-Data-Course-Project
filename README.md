@@ -13,4 +13,4 @@ run_analysis.R contains code to respond the five questions in the assigment. It 
 
 CodeBook.md describes the variables, data, work and results to clean up the data.
 
-The output of the 5th question is in the file "my_tidyData.txt", also uploaded in the course project submission page and witin this Github repository.
+The output of the 5th question is in the file "my_tidyData.txt", also uploaded in the course project submission page and witin this Github repository. This file can be verified in  studio-R [read.table] 
