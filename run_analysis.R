@@ -30,14 +30,6 @@ dataSubTest <- read.table("test/subject_test.txt")
 #Read Features files
 dataFeatTrain <- read.table("train/X_train.txt")
 dataFeatTest <- read.table("test/X_test.txt")
-
-#Check read files
-str(dataActTrain)
-str(dataActTest)
-str(dataSubTrain)
-str(dataSubTest)
-str(dataFeatTrain)
-str(dataFeatTest)
  
 # Concatenating data tables by rows
 datActivity<- rbind(dataActTrain, dataActTest)
