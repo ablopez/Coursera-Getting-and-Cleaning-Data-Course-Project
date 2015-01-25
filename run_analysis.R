@@ -7,7 +7,7 @@ dir()
 ## Load required libaries
 library(plyr);
 
-##Reading datafile and loding it in R-studio, then uzip it
+##Reading datafile and loading it in R-studio, then uzip it
 fileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "     
 download.file(fileUrl,destfile="C:/Users/me/Desktop/AS/Dataset.zip", mode="wb")
 unzip(zipfile="C:/Users/me/Desktop/AS/Dataset.zip",exdir="C:/Users/me/Desktop/AS")
